@@ -1,10 +1,10 @@
-# rov-interface - Quick Reference Card
+# HydroWire - Quick Reference Card
 
 ## 🚀 Quick Start
 
 ```python
 import asyncio
-from rov_lib import ROVManager
+from hydrowire import HydroWireManager as ROVManager
 
 async def main():
     manager = ROVManager("ws://localhost:8000")
@@ -26,10 +26,10 @@ asyncio.run(main())
 
 ```python
 # High-level (recommended)
-from rov_lib import ROVManager, start, get_manager
+from hydrowire import HydroWireManager as ROVManager, start, get_manager
 
 # Low-level (if needed)
-from rov_lib import WebSocketCommandClient
+from hydrowire import WebSocketCommandClient
 ```
 
 ## 🎯 Send Command Patterns
@@ -97,7 +97,7 @@ The library automatically groups parameters under the `params` key.
 ## 🏗️ Project Structure
 
 ```
-rov_lib/
+hydrowire/
 ├── __init__.py          # Package exports
 ├── client.py            # WebSocket client (low-level)
 └── manager.py           # ROVManager (high-level)
@@ -207,5 +207,5 @@ pip install -r requirements.txt
 
 ---
 
-**Ready to use!** Import `ROVManager` and start building your app.
+**Ready to use!** Import `HydroWireManager` (or alias to `ROVManager`) and start building your app.
 

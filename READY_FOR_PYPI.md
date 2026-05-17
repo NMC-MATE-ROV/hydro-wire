@@ -2,12 +2,12 @@
 
 ## What Has Been Prepared
 
-Your `rov-interface` package is now **fully prepared** for upload to PyPI. Here's what was set up:
+Your `hydrowire` package is now **fully prepared** for upload to PyPI. Here's what was set up:
 
 ### 📦 Package Files
 
 ✅ **pyproject.toml** - Complete with:
-- Package name: `rov-interface`
+-- Package name: `hydrowire`
 - Version: `0.0.1`
 - Python requirement: `>=3.9`
 - All metadata and classifiers
@@ -17,7 +17,7 @@ Your `rov-interface` package is now **fully prepared** for upload to PyPI. Here'
 
 ✅ **MANIFEST.in** - Specifies all files to include
 
-✅ **rov_lib/** - Main package:
+✅ **hydrowire/** - Main package:
 - `__init__.py` - Proper exports
 - `client.py` - WebSocket client
 - `manager.py` - ROVManager
@@ -41,14 +41,14 @@ Your `rov-interface` package is now **fully prepared** for upload to PyPI. Here'
 ## Current Status
 
 ```
-rov-interface/
+hydrowire/
 ├── ✅ pyproject.toml        (Complete metadata)
 ├── ✅ LICENSE               (MIT)
 ├── ✅ README.md             (With PyPI install)
 ├── ✅ MANIFEST.in           (File manifest)
 ├── ✅ .gitignore            (Build artifacts)
 ├── ✅ .github/workflows/    (CI/CD)
-├── ✅ rov_lib/              (Package code)
+├── ✅ hydrowire/              (Package code)
 ├── ✅ tests/                (All passing)
 └── ✅ examples/             (Usage examples)
 ```
@@ -83,12 +83,12 @@ rov-interface/
 
 Your package will be available at:
 ```
-https://pypi.org/project/rov-interface/
+https://pypi.org/project/hydrowire/
 ```
 
 Anyone can then install with:
 ```bash
-pip install rov-interface
+pip install hydrowire
 ```
 
 ## Testing on TestPyPI First (Recommended)
@@ -103,7 +103,7 @@ python -m build
 twine upload --repository testpypi dist/* -u __token__ -p pypi_test_your_token_here
 
 # Test installation
-pip install --index-url https://test.pypi.org/simple/ rov-interface==0.0.1
+pip install --index-url https://test.pypi.org/simple/ hydrowire==0.0.1
 
 # If successful, publish to production PyPI
 twine upload dist/* -u __token__ -p pypi_your_token_here
@@ -136,7 +136,7 @@ All necessary files for publication are in place:
 ├── PUBLISH_GUIDE.md            - How to publish
 ├── PUBLICATION_CHECKLIST.md    - Pre-publish checklist
 ├── INSTALLATION_GUIDE.md       - Installation instructions
-├── rov_lib/
+├── hydrowire/
 │   ├── __init__.py            - v0.0.1
 │   ├── client.py              - WebSocket client
 │   ├── manager.py             - Manager class
@@ -154,12 +154,12 @@ All necessary files for publication are in place:
 ## Key Metadata
 
 ```toml
-name = "rov-interface"
+name = "hydrowire"
 version = "0.0.1"
-description = "Python library for applications to interact with ROV systems over WebSocket"
-authors = [{name = "ROV Interface Contributors"}]
+description = "Python library for applications to interact with HydroWire devices over WebSocket"
+authors = [{name = "HydroWire Contributors"}]
 license = {text = "MIT"}
-keywords = ["rov", "websocket", "robotics", "remotely-operated-vehicle"]
+keywords = ["hydrowire", "websocket", "robotics", "remotely-operated-vehicle"]
 requires-python = ">=3.9"
 dependencies = ["websockets>=10.4"]
 ```
@@ -170,7 +170,7 @@ dependencies = ["websockets>=10.4"]
 2. **Test locally**: `python -m build && twine check dist/*`
 3. **Test on TestPyPI** - Optional but recommended
 4. **Publish to PyPI** - Run `twine upload dist/*`
-5. **Verify**: Visit https://pypi.org/project/rov-interface/
+5. **Verify**: Visit https://pypi.org/project/hydrowire/
 
 ## Commands Cheat Sheet
 
@@ -191,15 +191,15 @@ twine upload dist/*
 rm -rf dist/ build/ *.egg-info/
 
 # Check installation works
-pip install rov-interface
-python -c "from rov_lib import ROVManager; print('Success!')"
+pip install hydrowire
+python -c "from hydrowire import HydroWireManager as ROVManager; print('Success!')"
 ```
 
 ## Troubleshooting
 
 **"Package name already exists"**
 - Package name must be unique on PyPI
-- Try: `rov-interface-yourname` if needed
+- Try: `hydrowire-yourname` if needed
 
 **"Version already exists"**
 - Can't reuse the same version number
@@ -207,7 +207,7 @@ python -c "from rov_lib import ROVManager; print('Success!')"
 
 **Import errors after install**
 - Clear pip cache: `pip cache purge`
-- Reinstall: `pip install --force-reinstall rov-interface`
+- Reinstall: `pip install --force-reinstall hydrowire`
 
 ## Support
 

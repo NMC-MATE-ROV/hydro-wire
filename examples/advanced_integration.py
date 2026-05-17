@@ -13,7 +13,7 @@ Command Structure Note:
 import asyncio
 import json
 from typing import Dict, Any
-from rov_lib import ROVManager
+from hydrowire import HydroWireManager as ROVManager
 
 
 class MainApplication:

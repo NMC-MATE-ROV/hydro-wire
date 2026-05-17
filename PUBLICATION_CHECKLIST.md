@@ -5,7 +5,7 @@ This checklist ensures your package is ready for publication to PyPI.
 ## Code Quality ✅
 
 - [ ] All tests pass: `pytest tests/ -v`
-- [ ] No linting errors: `flake8 rov_lib/` (if flake8 installed)
+ - [ ] No linting errors: `flake8 hydrowire/` (if flake8 installed)
 - [ ] Code is documented with docstrings
 - [ ] Type hints are present in code
 - [ ] Error handling is comprehensive
@@ -13,7 +13,7 @@ This checklist ensures your package is ready for publication to PyPI.
 ## Package Metadata ✅
 
 - [ ] **pyproject.toml**
-  - [ ] `name = "rov-interface"` (correct name)
+  - [ ] `name = "hydrowire"` (correct name)
   - [ ] `version = "0.0.1"` (updated for this release)
   - [ ] `description` is clear and accurate
   - [ ] `readme = "README.md"` is specified
@@ -43,8 +43,8 @@ This checklist ensures your package is ready for publication to PyPI.
 
 ## Project Structure ✅
 
-- [ ] **rov_lib/__init__.py** exists with `__all__` exports
-- [ ] **rov_lib/py.typed** exists (for type hints)
+ - [ ] **hydrowire/__init__.py** exists with `__all__` exports
+ - [ ] **hydrowire/py.typed** exists (for type hints)
 - [ ] All modules properly formatted
 - [ ] No temporary or test files in source
 
@@ -108,22 +108,22 @@ This checklist ensures your package is ready for publication to PyPI.
 
 ## Post-Publication ✅
 
-- [ ] Package appears on PyPI: https://pypi.org/project/rov-interface/
-- [ ] Installation works: `pip install rov-interface`
+ - [ ] Package appears on PyPI: https://pypi.org/project/hydrowire/
+ - [ ] Installation works: `pip install hydrowire`
 - [ ] GitHub release created with release notes
 - [ ] Changelog updated (if applicable)
 
 ## Files Ready for Publication ✅
 
 ```
-rov-interface/
+rov-interface/  # repository directory name (can remain the same)
 ├── pyproject.toml                 ✅ Complete metadata
 ├── LICENSE                        ✅ MIT License
 ├── README.md                      ✅ Full documentation
 ├── MANIFEST.in                    ✅ File manifest
 ├── .gitignore                     ✅ Updated
 ├── .github/workflows/publish.yml  ✅ CI/CD pipeline
-├── rov_lib/
+├── hydrowire/
 │   ├── __init__.py               ✅ Exports configured
 │   ├── client.py                 ✅ Main module
 │   ├── manager.py                ✅ Manager module
@@ -146,14 +146,14 @@ cd /home/jc/projects/rov-interface
 python -m build
 twine check dist/*
 
-# Test build
-python -c "import tarfile; t = tarfile.open('dist/rov_interface-0.0.1.tar.gz'); t.list()"
+    # Test build
+    python -c "import tarfile; t = tarfile.open('dist/hydrowire-0.0.1.tar.gz'); t.list()"
 
 # All good? Publish!
 twine upload dist/*
 ```
 
-Then verify at: https://pypi.org/project/rov-interface/
+Then verify at: https://pypi.org/project/hydrowire/
 
 ---
 

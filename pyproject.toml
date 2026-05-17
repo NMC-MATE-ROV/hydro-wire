@@ -3,14 +3,14 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rov-interface"
+name = "hydrowire"
 version = "0.0.1"
 description = "Python library for applications to interact with ROV (Remotely Operated Vehicle) systems over WebSocket"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
 authors = [
-    {name = "ROV Interface Contributors", email = "contact@rov-interface.dev"}
+    {name = "HydroWire Contributors", email = "contact@hydrowire.dev"}
 ]
 keywords = ["rov", "websocket", "robotics", "remotely-operated-vehicle", "control", "async"]
 classifiers = [
@@ -38,14 +38,14 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/rov-interface"
-Documentation = "https://github.com/yourusername/rov-interface#readme"
-Repository = "https://github.com/yourusername/rov-interface.git"
-"Bug Tracker" = "https://github.com/yourusername/rov-interface/issues"
+Homepage = "https://github.com/yourusername/hydrowire"
+Documentation = "https://github.com/yourusername/hydrowire#readme"
+Repository = "https://github.com/yourusername/hydrowire.git"
+"Bug Tracker" = "https://github.com/yourusername/hydrowire/issues"
 
 [tool.setuptools.packages]
 find = { where = ["."] }
 
 [tool.setuptools.package-data]
-rov_lib = ["py.typed"]
+hydrowire = ["py.typed"]
 

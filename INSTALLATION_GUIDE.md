@@ -1,11 +1,11 @@
-# Installing and Using rov-interface
+# Installing and Using HydroWire
 
 ## Quick Start: Install from PyPI
 
 The easiest way to use this library is to install it from PyPI:
 
 ```bash
-pip install rov-interface
+pip install hydrowire
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Once installed, you can import and use the library from anywhere:
 
 ```python
 import asyncio
-from rov_lib import ROVManager
+from hydrowire import HydroWireManager as ROVManager
 
 async def main():
     manager = ROVManager("ws://your-rov:8000")
@@ -37,18 +37,18 @@ if __name__ == "__main__":
 
 ### Standard Installation
 ```bash
-pip install rov-interface
+pip install hydrowire
 ```
 
 ### Install with Development Tools
 ```bash
-pip install "rov-interface[dev]"
+pip install "hydrowire[dev]"
 ```
 
 ### From Source (for development)
 ```bash
-git clone https://github.com/yourusername/rov-interface.git
-cd rov-interface
+git clone https://github.com/yourusername/hydrowire.git
+cd hydrowire
 pip install -e .
 ```
 
@@ -57,13 +57,13 @@ pip install -e .
 Check if the package is installed:
 
 ```bash
-pip show rov-interface
+pip show hydrowire
 ```
 
 Quick test:
 
 ```bash
-python -c "from rov_lib import ROVManager; print('✅ Ready to use!')"
+python -c "from hydrowire import HydroWireManager as ROVManager; print('✅ Ready to use!')"
 ```
 
 ## Requirements

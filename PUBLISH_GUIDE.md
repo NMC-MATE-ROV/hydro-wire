@@ -1,6 +1,6 @@
-# Publishing rov-interface to PyPI
+# Publishing hydrowire to PyPI
 
-This guide explains how to publish the rov-interface package to PyPI (Python Package Index).
+This guide explains how to publish the hydrowire package to PyPI (Python Package Index).
 
 ## Prerequisites
 
@@ -43,8 +43,8 @@ python -m build
 ```
 
 This creates:
-- `dist/rov_interface-0.0.1.tar.gz` (source)
-- `dist/rov_interface-0.0.1-py3-none-any.whl` (wheel)
+ - `dist/hydrowire-0.0.1.tar.gz` (source)
+ - `dist/hydrowire-0.0.1-py3-none-any.whl` (wheel)
 
 ### 4. Check Package
 
@@ -85,7 +85,7 @@ twine upload --repository testpypi dist/*
 Test installation:
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ rov-interface==0.0.1
+pip install --index-url https://test.pypi.org/simple/ hydrowire==0.0.1
 ```
 
 ### 6. Publish to Production PyPI
@@ -102,7 +102,7 @@ twine upload dist/* -u __token__ -p pypi_your_token_here
 
 ### 7. Verify Publication
 
-Visit: https://pypi.org/project/rov-interface/
+Visit: https://pypi.org/project/hydrowire/
 
 Package is now installable worldwide:
 
@@ -187,10 +187,10 @@ Before publishing, ensure these files exist:
 - ✅ `LICENSE` - License file
 - ✅ `README.md` - Documentation
 - ✅ `MANIFEST.in` - Include supplementary files
-- ✅ `rov_lib/__init__.py` - Package init
-- ✅ `rov_lib/client.py` - Main module
-- ✅ `rov_lib/manager.py` - Manager module
-- ✅ `rov_lib/py.typed` - Type hints marker
+ - ✅ `hydrowire/__init__.py` - Package init
+ - ✅ `hydrowire/client.py` - Main module
+ - ✅ `hydrowire/manager.py` - Manager module
+ - ✅ `hydrowire/py.typed` - Type hints marker
 
 ## Useful Commands
 

@@ -1,20 +1,20 @@
-# rov-interface
+# HydroWire
 
-A Python library for applications to interact with ROV (Remotely Operated Vehicle) systems over WebSocket.
+A Python library for applications to interact with HydroWire devices (ROV / robot peripherals) over WebSocket.
 
 ## Installation
 
 ### From PyPI (Recommended)
 
 ```bash
-pip install rov-interface
+pip install hydrowire
 ```
 
 ### From Source (Development)
 
 ```bash
-git clone https://github.com/yourusername/rov-interface.git
-cd rov-interface
+git clone https://github.com/yourusername/hydrowire.git
+cd hydrowire
 pip install -e .
 ```
 
@@ -44,7 +44,7 @@ pip install -r dev-requirements.txt
 
 ```python
 import asyncio
-from rov_lib import ROVManager
+from hydrowire import HydroWireManager as ROVManager
 
 async def main():
     # Initialize manager
@@ -71,7 +71,7 @@ asyncio.run(main())
 
 ```python
 import asyncio
-from rov_lib import start
+from hydrowire import start
 
 async def main():
     # Quick start with convenience function

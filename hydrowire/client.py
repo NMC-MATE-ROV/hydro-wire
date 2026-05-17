@@ -1,4 +1,4 @@
-"""A tiny async websocket client to send JSON commands to ROV devices."""
+"""A tiny async websocket client to send JSON commands to HydroWire devices."""
 import asyncio
 import json
 from typing import Optional, Any, Dict
@@ -48,7 +48,7 @@ class WebSocketCommandClient:
         """Send a JSON command to a specific device over the websocket.
 
         Args:
-            device_id: The ID of the target device on the ROV
+            device_id: The ID of the target device on HydroWire
             command: The command dictionary to send (must contain "action" key)
             expect_response: If True, waits for one JSON response and returns it
 
@@ -75,10 +75,9 @@ class WebSocketCommandClient:
             "params": params
         }
 
-        print(f"Sending payload: {payload}")
-
         await self._ws.send(json.dumps(payload))
         if expect_response:
             data = await asyncio.wait_for(self._ws.recv(), timeout=self.timeout)
             return json.loads(data)
         return None
+

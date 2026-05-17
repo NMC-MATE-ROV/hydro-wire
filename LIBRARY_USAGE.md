@@ -2,7 +2,7 @@
 
 ## Quick Summary
 
-Your **rov-interface** library has been refactored to serve as a backend library for Python applications to interact with ROV systems. Here's what you now have:
+Your **HydroWire** library has been refactored to serve as a backend library for Python applications to interact with ROV systems. Here's what you now have:
 
 ## Core Features
 
@@ -18,7 +18,7 @@ Your **rov-interface** library has been refactored to serve as a backend library
 
 ```python
 import asyncio
-from rov_lib import ROVManager
+from hydrowire import HydroWireManager as ROVManager
 
 async def main():
     # Create and start manager
@@ -35,7 +35,7 @@ async def main():
         print(response)
     finally:
         await manager.close()
-
+    
 asyncio.run(main())
 ```
 
@@ -111,11 +111,11 @@ await manager.run(gui_enabled=True, theme="dark")
 ## Directory Structure
 
 ```
-rov-interface/
-├── rov_lib/                    # Main library package
-│   ├── __init__.py            # Exports: ROVManager, start, get_manager
+hydrowire/
+├── hydrowire/                    # Main library package
+│   ├── __init__.py            # Exports: HydroWireManager, start, get_manager
 │   ├── client.py              # Low-level WebSocket client
-│   └── manager.py             # High-level ROVManager
+│   └── manager.py             # High-level HydroWireManager
 ├── examples/                   # Usage examples
 │   ├── basic_usage.py         # Simple example
 │   └── advanced_integration.py # Complex integration
@@ -181,7 +181,7 @@ async def perform_mission():
 pytest tests/ -v
 
 # Run with coverage
-pytest tests/ --cov=rov_lib
+pytest tests/ --cov=hydrowire
 ```
 
 ## Next Steps

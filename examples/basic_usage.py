@@ -3,7 +3,7 @@
 import asyncio
 from time import sleep
 
-from rov_lib import ROVManager
+from hydrowire import HydroWireManager as ROVManager
 
 
 async def main():

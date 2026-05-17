@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `rov-interface` library has been refactored to serve as a proper backend library for Python applications to interact with ROV (Remotely Operated Vehicle) systems. The refactoring maintains backward compatibility while adding new capabilities for device-targeted command routing and high-level application integration.
+The `hydrowire` library has been refactored to serve as a proper backend library for Python applications to interact with ROV (Remotely Operated Vehicle) systems. The refactoring maintains backward compatibility while adding new capabilities for device-targeted command routing and high-level application integration.
 
 ## What Changed
 
@@ -81,7 +81,7 @@ __all__ = ["WebSocketCommandClient", "ROVManager", "start", "get_manager"]
 
 Users can now import high-level APIs directly:
 ```python
-from rov_lib import ROVManager, start
+from hydrowire import HydroWireManager as ROVManager, start
 ```
 
 ### 5. **Updated Tests** (`tests/test_client.py`)
@@ -110,10 +110,10 @@ from rov_lib import ROVManager, start
 ### Simple Imports
 ```python
 # Old (still works)
-from rov_lib import WebSocketCommandClient
+from hydrowire.client import WebSocketCommandClient
 
 # New (recommended)
-from rov_lib import ROVManager, start
+from hydrowire import HydroWireManager as ROVManager, start
 ```
 
 ### Command Sending

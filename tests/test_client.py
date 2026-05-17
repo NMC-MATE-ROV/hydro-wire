@@ -4,8 +4,8 @@ import json
 import pytest
 import websockets
 
-from rov_lib.client import WebSocketCommandClient
-from rov_lib.manager import ROVManager
+from hydrowire.client import WebSocketCommandClient
+from hydrowire.manager import HydroWireManager as ROVManager
 
 
 @pytest.mark.asyncio

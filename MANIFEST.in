@@ -3,6 +3,6 @@ include LICENSE
 include QUICK_REFERENCE.md
 include LIBRARY_USAGE.md
 include INSTALLATION_GUIDE.md
-recursive-include rov_lib *.py
+recursive-include hydrowire *.py
 recursive-include tests *.py
 
