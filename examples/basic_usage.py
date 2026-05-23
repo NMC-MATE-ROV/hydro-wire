@@ -4,6 +4,7 @@ import asyncio
 from time import sleep
 
 from hydrowire import HydroWireManager as ROVManager
+from hydrowire import LED
 
 
 async def main():
@@ -17,30 +18,38 @@ async def main():
 
     try:
         # Example 1: Send command to LED device
-        response = await manager.send_command(
-            device_id="led",
-            command={"action": "pwm", "duty_cycle": 0.5},
-            expect_response=True
-        )
-        print(f"Led response: {response}")
-
-        response = await manager.send_command(
-            device_id="led",
-            command={"action": "get_state"},
-            expect_response=True
-        )
-        print(f"Led status: {response}")
-
-        sleep(2)
-
-        print("Sending turn off command to LED")
-        response = await manager.send_command(
-            device_id="led",
-            command={"action": "pwm", "duty_cycle": 0.0},
-            expect_response=True
-        )
-        print(f"Led response: {response}")
+        # response = await manager.send_command(
+        #     device_id="led",
+        #     command={"action": "pwm", "duty_cycle": 0.5},
+        #     expect_response=True
+        # )
+        # print(f"Led response: {response}")
+        #
+        # response = await manager.send_command(
+        #     device_id="led",
+        #     command={"action": "get_state"},
+        #     expect_response=True
+        # )
+        # print(f"Led status: {response}")
+        #
+        # sleep(2)
+        #
+        # print("Sending turn off command to LED")
+        # response = await manager.send_command(
+        #     device_id="led",
+        #     command={"action": "pwm", "duty_cycle": 0.0},
+        #     expect_response=True
+        # )
+        # print(f"Led response: {response}")
         # Sends: {"device": "led", "cmd": "pwm", "params": {"duty_cycle": 0.5}}
+        while True:
+            input()
+            led = LED(
+                    name="led",
+                    manager=manager,
+            )
+
+            await led.toggle()
 
         # Example 2: Send command to camera
         # response = await manager.send_command(
